@@ -10,3 +10,15 @@ C:\Users\User\Desktop\repos\lesson 10\lesson 10.Business\obj\Debug\net5.0\lesson
 C:\Users\User\Desktop\repos\lesson 10\lesson 10.Business\obj\Debug\net5.0\refint\lesson 10.Business.dll
 C:\Users\User\Desktop\repos\lesson 10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.pdb
 C:\Users\User\Desktop\repos\lesson 10\lesson 10.Business\obj\Debug\net5.0\ref\lesson 10.Business.dll
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\bin\Debug\net5.0\lesson 10.Business.deps.json
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\bin\Debug\net5.0\lesson 10.Business.dll
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\bin\Debug\net5.0\ref\lesson 10.Business.dll
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\bin\Debug\net5.0\lesson 10.Business.pdb
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.csproj.AssemblyReference.cache
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.AssemblyInfoInputs.cache
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.AssemblyInfo.cs
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.csproj.CoreCompileInputs.cache
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.dll
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\ref\lesson 10.Business.dll
+E:\Programming\CodeAcademy\Projektai\10 lesson\lesson-10\lesson 10.Business\obj\Debug\net5.0\lesson 10.Business.pdb

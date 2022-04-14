@@ -6,16 +6,22 @@ namespace lesson_10.DataAccess
 {
     public class OrderRepository
     {
-        public OrderProductRepository OrdProdRep { get; }
-        public ProductRepository ProdRep { get; }
         private List<Order> OrdersList { get; }
 
         public OrderRepository()
         {
-            OrdProdRep = new OrderProductRepository();
             OrdersList = new List<Order>();
-            ProdRep = new ProductRepository();
-            OrdersList.Add(new Order(DateTime.Now, "abc", OrdProdRep.Retrieve()));
+
+            List<Product> products = new List<Product>();
+            products.Add(new Product("Produktas 1", "Aprasymas1", 1.99m));
+            products.Add(new Product("Produktas 1", "Aprasymas1", 1.99m));
+            products.Add(new Product("Produktas 1", "Aprasymas1", 1.99m));
+            products.Add(new Product("Produktas 2", "Aprasymas2", 2.99m));
+            products.Add(new Product("Produktas 3", "Aprasymas3", 3.99m));
+
+            OrdersList.Add(new Order(DateTime.Now, "abc1", products));
+            OrdersList.Add(new Order(DateTime.Now, "abc2", products));
+            OrdersList.Add(new Order(DateTime.Now, "abc3", products));
         }
 
         public List<Order> Retrieve()
@@ -26,20 +32,6 @@ namespace lesson_10.DataAccess
         public Order Retrieve(int ordersListUniqueOrderId)
         {
             return OrdersList[ordersListUniqueOrderId];
-        }
-
-        public decimal CountPrice()
-        {
-            List<List<OrderProduct>> listas = OrdProdRep.Retrieve();
-            decimal price = 0;
-            for (int i = 0; i < listas.Count; i++)
-            {
-                for (int j = 0; j < listas[i].Count; j++)
-                {
-                    price += listas[i][j].Product.CurrentPrice * listas[i][j].Quantity;
-                }
-            }
-            return price;
         }
     }
 }

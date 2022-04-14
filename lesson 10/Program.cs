@@ -21,6 +21,8 @@ namespace lesson_10
             {
                 Console.Write($"- {productsList[i].Name}, {productsList[i].Description}, {productsList[i].CurrentPrice}\r\n");
             }
+
+
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---------------------------------------");
             Console.ResetColor();
@@ -31,18 +33,23 @@ namespace lesson_10
             List<Order> orders = orderRepository.Retrieve();
             Console.WriteLine($"Viso uzsakymu rinkiniu: {orders.Count}");
 
-            OrderProductRepository orderProductRepository = new OrderProductRepository();
-            List<List<OrderProduct>> listas = orderProductRepository.Retrieve();
-
-
-            for (int i = 0; i < listas.Count; i++)
+            decimal totalPrice = 0;
+            for (int i = 0; i < orders.Count; i++)
             {
                 Console.WriteLine($"  Uzsakymo nr.{i + 1} duomenys:");
-                Console.WriteLine($"    Uzsakymo data: {orders[0].OrderDate}, uzsakymo adresas: {orders[0].ShippingAdress}.");
-                for (int j = 0; j < listas[i].Count; j++)
+                Console.WriteLine($"    Uzsakymo data: {orders[i].OrderDate}, uzsakymo adresas: {orders[i].ShippingAdress}.");
+                for (int j = 0; j < orders[i].OrderProducts.Count; j++)
                 {
-                    Console.WriteLine($"      Produktas: {listas[i][j].Product.Name}; Produkto aprašymas: {listas[i][j].Product.Description}; Produkto kaina/vnt.: {listas[i][j].Product.CurrentPrice}; Užsakytas kiekis: {listas[i][j].Quantity}.");
+                    Product product = orders[i].OrderProducts[j].Product;
+                    Console.WriteLine($@"      Produktas: {product.Name}; 
+                                               Produkto aprašymas: {product.Description};
+                                               Produkto kaina/vnt.: {product.CurrentPrice};
+                                               Užsakytas kiekis: {orders[i].OrderProducts[j].Quantity}.");
                 }
+
+                decimal priceToPay = orders[i].CountPrice();
+                Console.WriteLine($"Moketi isviso: {priceToPay}");
+                totalPrice += priceToPay;
             }
 
             Console.WriteLine();
@@ -50,7 +57,7 @@ namespace lesson_10
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("Viso sumokėta: ");
             Console.ResetColor();
-            Console.WriteLine(orderRepository.CountPrice());
+            Console.WriteLine(totalPrice);
             Console.WriteLine();
             Console.WriteLine("Programa pasibaigia...");
             Console.ReadLine();

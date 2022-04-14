@@ -7,14 +7,14 @@ namespace lesson_10.Business
     public class Order
     {
         public DateTime OrderDate { get; }
-        public string ShippingAdress { get; }
+        public string ShippingAddress { get; }
         public List<OrderProduct> OrderProducts { get; }
 
-        public Order(DateTime orderDate, string shippingAdress, List<Product> products)
+        public Order(DateTime orderDate, string shippingAddress, List<Product> products)
         {
             OrderDate = orderDate;
-            ShippingAdress = shippingAdress;
-
+            ShippingAddress = shippingAddress;
+            //----------------------------------------
             OrderProducts = new List<OrderProduct>();
             foreach (var product in products)
             {

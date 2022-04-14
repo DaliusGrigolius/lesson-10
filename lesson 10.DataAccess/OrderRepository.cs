@@ -29,9 +29,9 @@ namespace lesson_10.DataAccess
             return OrdersList;
         }
 
-        public Order Retrieve(int ordersListUniqueOrderId)
+        public Order Retrieve(int uniqueOrderId)
         {
-            return OrdersList[ordersListUniqueOrderId];
+            return OrdersList[uniqueOrderId];
         }
     }
 }
